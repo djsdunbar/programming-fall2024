@@ -1,0 +1,30 @@
+h2 {
+    color:#000000;
+   background-image: linear-gradient(grey, gold, blue);
+    font-family:cursive
+
+}
+
+*{
+    background-color: aqua;
+
+}
+
+p{
+    color:deeppink;
+    border:dotted yellow
+    
+}
+
+h2 {
+  outline: 5px dotted green;
+border:double
+}
+
+p {
+    outline: 2px dashed blue;
+    font-family:-apple-system, BlinkMacSystemFont;
+    font-size:large
+    
+
+}
