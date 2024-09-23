@@ -1,7 +1,7 @@
 h2 {
     color:#000000;
    background-image: linear-gradient(grey, gold, blue);
-    font-family:cursive
+    font-family:cursive;
 
 }
 
@@ -12,19 +12,31 @@ h2 {
 
 p{
     color:deeppink;
-    border:dotted yellow
+    border:dotted yellow;
     
 }
 
 h2 {
   outline: 5px dotted green;
-border:double
+    border:double;
 }
 
 p {
     outline: 2px dashed blue;
     font-family:-apple-system, BlinkMacSystemFont;
-    font-size:large
-    
+    font-size:large;
+}
 
+
+.alert{
+    color:red;
+    font-weight:400;
+    font-size: 32px;
+    
+}
+
+
+#para-2{
+color:rgb(226, 142, 43);
+border:solid 10px green;
 }
