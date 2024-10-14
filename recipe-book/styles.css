@@ -26,6 +26,8 @@ background-color: darkgrey;
 font-family: cursive;
 text-align: center;
 border: groove 20px rosybrown;
+width: auto;
+height: auto;
 }
 
 #vodkapasta{
