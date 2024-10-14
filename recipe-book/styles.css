@@ -1,0 +1,42 @@
+
+#brownies{
+    border:groove 10px #4d1b00;
+    font-family: cursive;
+    padding: 8px, 10px;
+    background-color: rosybrown;
+}
+
+.fulldessert{
+background-color: rosybrown;
+
+    }
+
+.design1{
+    border: groove brown;
+    padding: 6px;
+    display:block;
+}
+
+.img{
+    border: groove 10px rosybrown;
+}
+
+#mainpage{
+background-color: darkgrey;
+font-family: cursive;
+text-align: center;
+border: groove 20px rosybrown;
+}
+
+#vodkapasta{
+    font-family: cursive;
+    padding: 8px, 10px;
+    background-color: coral;
+}
+
+#steak{
+ font-family: cursive;
+    padding: 8px, 10px;
+    background-color: palevioletred;   
+    
+}
