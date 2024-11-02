@@ -1,11 +1,16 @@
+*{
+border: solid black;
+}
+
 body {
     margin: 0;
-    background: #eee;
+    background: gold;
     font-family: Besley, serif;
+    height: 100vh;
 }
 
 .header {
-    background: white;
+    background: black;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -14,7 +19,7 @@ body {
 }
 
 .profile-image {
-    background: rebeccapurple;
+    background: gold;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     width: 48px;
@@ -25,7 +30,7 @@ body {
 }
 
 .logo {
-    color: rebeccapurple;
+    color: gold;
     font-size: 32px;
     font-weight: 900;
     font-style: italic;
@@ -38,7 +43,7 @@ body {
 button {
     border: none;
     border-radius: 12px;
-    background: rebeccapurple;
+    background: gold;
     color: white;
     padding: 8px 24px;
 }
@@ -46,7 +51,7 @@ button {
 a {
     /* this removes the line under our links */
     text-decoration: none;
-    color: rebeccapurple;
+    color: gold;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -67,14 +72,81 @@ ul {
 
 .content{
 display: flex;
+height:calc(100vh-87px);
+    overflow: hidden
+    /*overflow: scroll;*/
+
 }
 
 .gallery{
 display: flex; 
+flex: 2 1 400px;
+/*gap: 20px;*/
+overflow-y: scroll;
+    /*height: 100;*/
+    
 }
 
 .description{
   display:flex;
 flex-direction: column;
     
+}
+
+ .item{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:flex-end;
+width: 250px;
+    
+
+
+
+
+
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    flex-grow:1;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.image{
+height:auto;
+max-width: 100%;
+}
+
+.label{
+    
+}
+
+.description{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    flex: 1 1 400px;
+    padding: 20px;
+    margin:10px;
+    
+}
+
+#profilepic{
+/*height: 50%;*/
+width: 80%;
+align-items:center;
+/*flex-grow:3;*/
+
+}
+
+#more-info{
+background-color: white;
+height: 20px;
+width:100%;
+border-radius: 10px;
+
 }
