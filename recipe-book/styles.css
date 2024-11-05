@@ -1,44 +1,53 @@
-
-#brownies{
-    border:groove 2px #4d1b00;
+#brownies {
+    border: groove 2px #4d1b00;
     font-family: cursive;
     padding: 8px, 10px;
     background-color: rosybrown;
+    font-weight: 100;
+    text-align: center;
 }
 
-.fulldessert{
-background-color: rosybrown;
+.fulldessert {
+    background-color: rosybrown;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+}
 
-    }
-
-.design1{
+.design1 {
     border: groove brown;
     padding: 6px;
-    display:block;
+    display: block;
 }
 
-.img{
+.img {
     border: groove 10px rosybrown;
+    margin: 20px;
 }
 
-#mainpage{
-background-color: darkgrey;
-font-family: cursive;
-text-align: center;
-border: groove 20px rosybrown;
-width: auto;
-height: auto;
+#mainpage {
+    background-color: darkgrey;
+    font-family: cursive;
+    text-align: center;
+    border: groove 20px rosybrown;
+    width: auto;
+    height: auto;
 }
 
-#vodkapasta{
+#vodkapasta {
     font-family: cursive;
     padding: 8px, 10px;
     background-color: coral;
+    font-size: 20px;
+    font-weight: 50;
+    text-align: center;
 }
 
-#steak{
- font-family: cursive;
+#steak {
+    font-family: cursive;
     padding: 8px, 10px;
-    background-color: palevioletred;   
-    
+    background-color: palevioletred;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
 }
