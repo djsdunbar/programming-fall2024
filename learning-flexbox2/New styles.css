@@ -1,0 +1,165 @@
+* {
+    border: solid black;
+}
+
+body {
+    margin: 0;
+    background: purple;
+    font-family: Besley, serif;
+    height: 100vh;
+}
+
+.header {
+    background: black;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-image {
+    background: green;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.logo {
+    color: gold;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    flex: display;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    background: gold;
+    color: white;
+    padding: 8px 24px;
+}
+
+a {
+    /* this removes the line under our links */
+    text-decoration: none;
+    color: gold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+}
+
+.left,
+.right {
+    display: flex;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.image {
+    height: auto;
+    max-width: 100%;
+    margin: 10px;
+}
+
+a {
+    /* this removes the line under our links */
+    text-decoration: none;
+    color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo {
+    color: green;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    flex: display;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    background: green;
+    color: white;
+    padding: 8px 24px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin-top: 8px;
+}
+
+#profilepic {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: auto;
+}
+#more-info {
+    background-color: white;
+    flex-direction: column;
+    height: 20px;
+    width: 100%;
+    border-radius: 18px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
