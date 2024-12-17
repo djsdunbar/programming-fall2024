@@ -21,7 +21,6 @@
 //
 //console.log(Object.keys(animal));
 
-
 let person = {
     name: "Terry",
     age: 23,
@@ -30,23 +29,36 @@ let person = {
     satScore: 400,
     job: "Basketball player",
     biggestFear: "infalted basketballs",
-    favoriteNumber: 3,
+    favoriteNumber: 3
 };
 
 console.log(person);
 console.log(person.height);
 
-person.age =25;
+person.age = 25;
 console.log(person);
 
-let persontwo= {
+let persontwo = {
     name: "Shellie",
     age: 22,
     height: "7'6",
     job: "Volleyball Player",
-    favoriteNumber: 16,
+    favoriteNumber: 16
 };
 
-console.log( person.name + " and " + persontwo.name + " met eachother at a sports banquet for the best athletes in the world.");
-console.log( person.name +" was intimidated by " + persontwo.name + " becasue she was taller than him. She was " + persontwo.height + " and he was " + person.height);
-console.log(person.name + " had always been the tallest perosn everywhere he went and never met some to literally look up to. He felt insecure and small.");
+console.log(
+    person.name + " and " + persontwo.name + " met eachother at a sports banquet for the best athletes in the world."
+);
+console.log(
+    person.name +
+        " was intimidated by " +
+        persontwo.name +
+        " becasue she was taller than him. She was " +
+        persontwo.height +
+        " and he was " +
+        person.height
+);
+console.log(
+    person.name +
+        " had always been the tallest perosn everywhere he went and never met some to literally look up to. He felt insecure and small."
+);

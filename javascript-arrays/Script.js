@@ -23,21 +23,22 @@
 //alert(groceries)
 
 //Activity 1
-//let task = ["wake up", "wash my face", "put on lotion", "get dressed"];
-//console.log(task);
-//task.push("eat breakfast", "go to school");
-//console.log("eat breakfast");
-//
-//task.pop(task);
-//console.log(task);
-//
-//task.splice(0,1, "cry");
-//console.log(task);
-//
-//task.splice(0,2);
+let task = ["wake up", "wash my face", "put on lotion", "get dressed"];
+console.log(task);
+task.push("eat breakfast", "go to school");
+console.log("eat breakfast");
 
-//Activity 2
+task.pop(task);
+console.log(task);
 
-let numbers =["5","6","7"];
+task.splice(0, 1, "cry");
+console.log(task);
 
+task.splice(0, 2);
 
+////Activity 2
+//let numbers =["5","6","7"];
+//numbers.splice(0, 1, "31");
+//console.log(numbers);
+//numbers.splice(1, 1, "2");
+//console.log(numbers);

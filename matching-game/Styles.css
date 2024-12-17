@@ -1,0 +1,75 @@
+.header {
+  text-align: center;
+  color: #005470;
+  background-color: #e3cfff;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+#start {
+  background-color: rgb(255, 200, 226);
+  color: #000000;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#time {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin: auto;
+  align-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.box {
+  background-color: #9b9deb;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 40px;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+.formula {
+  background-color: #ddccff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 40px;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.blink:hover {
+  background-color: beige;
+}
+
+.sub {
+  color: #ffff00;
+}
+
+body {
+  background-color: beige;
+}
+
+.clicked {
+  background-color: cadetblue;
+}

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css" />
         <script src="Script.js"></script>
     </head>
-    <body>
+    <body id="whole">
         <h1>Madlibsss</h1>
         <p>Fill out the prompts to create a crazy story!!</p>
         <label for="a1input"> Adjective: </label>
@@ -14,8 +14,8 @@
         <label for="n1input"> Noun: </label>
         <input type="text" id="n1input" placeholder="Enter a noun" />
 
-        <label for="v1input"> Verb: </label>
-        <input type="text" id="v1input" placeholder="Enter a verb" />
+        <label for="v1input"> Verb(ing): </label>
+        <input type="text" id="v1input" placeholder="Enter a verb with ing" />
         <label for="adverb1input"> Adverb: </label>
         <input type="text" id="adverb1input" placeholder="Enter a adverb" />
 
@@ -29,7 +29,7 @@
         <label for="place1input"> verb: </label>
         <input type="text" id="v2input" placeholder="Enter a verb" />
 
-        <label for="a2input"> Adjective: </label>
+        <label for="a2input"> Another Adjective: </label>
         <input type="text" id="a2input" placeholder="Enter a snack" />
         <label for="place1input"> Place: </label>
         <input type="text" id="p2input" placeholder="Enter a verb" />
@@ -39,11 +39,11 @@
         <label for="n1input"> Noun: </label>
         <input type="text" id="n2input" placeholder="Enter a noun" />
         <button onclick="generate()">Generate</button>
-        <p id="madlib">One Morning, there was a.... <span id="a1"></span> <span id="n1"></span>playing outside with a person named Ruby</p>
+        <p id="madlib">One Morning, there was a.... <span id="a1"></span> <span id="n1"></span> playing outside with a person named Ruby</p>
         <p id="madlib2">They both were... <span id="v1"></span> ... <span id="adverb1"></span></p>
         <p id="madlib3">The person/thing name was.... <span id="name1"></span> and they lived in...<span id="place1"> next to Ruby</span></p>
         <p id="madlib4">They both were hungry and ate ... <span id="s1"></span> while also...<span id="v2"></span></p>
-        <p id="madlib5">They were.. <span id="e1"> </span> ...becasue they became great....<span id="n2"></span></p>
         <p id="madlib6">After the <span id="a2"> </span> ... day they both went to their..... <span id="p2"></span></p>
+        <p id="madlib5">They were.. <span id="e1"> </span> ...becasue they became great....<span id="n2"></span></p>
     </body>
 </html>

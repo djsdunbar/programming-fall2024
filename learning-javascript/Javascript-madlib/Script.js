@@ -32,6 +32,15 @@ function generate() {
     const a2 = document.getElementById("a2input").value;
     const p2 = document.getElementById("p2input").value;
 
-    document.getElementById("a2").innerText = a1;
+    document.getElementById("a2").innerText = a2;
     document.getElementById("p2").innerText = p2;
+    
+    document.getElementById("madlib").style.display="block";
+     document.getElementById("madlib2").style.display="block";
+     document.getElementById("madlib3").style.display="block";
+     document.getElementById("madlib4").style.display="block";
+     document.getElementById("madlib5").style.display="block";
+     document.getElementById("madlib6").style.display="block";
+    
+    document.getElementById("whole").style.backgroundColor= "lightpink";
 }
