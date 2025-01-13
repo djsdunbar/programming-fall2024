@@ -151,6 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function isClicked(e) {
             let cardClicked = e.srcElement;
+            //console.log(cardClicked.tagName);
+            if (cardClicked.tagName == "P") {
+                alert("Please don't click the text");
+                return;
+            }
             cardClicked.classList.add("clicked");
             let clicked = document.getElementsByClassName("clicked");
             if (clicked.length == 2) {
@@ -180,6 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         function isMatch(item1, item2) {
+            console.log(item1);
+            console.log(item2);
             for (let i = 0; i < Object.keys(pairs).length; i++) {
                 console.log(pairs[i]);
                 if (item1 == pairs[i].word && item2 == pairs[i].match) {
@@ -195,9 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     shuffleAssign();
-    
-    let mySound = new Audio('');
-mySound.play();
+
+    let mySound = new Audio("");
+    mySound.play();
 });
-
-
