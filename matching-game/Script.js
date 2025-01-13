@@ -94,22 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
         { word: "Lithium acetate", match: "<p>LiC<sub>2</sub>H<sub>3</sub>O<sub>2</sub></p>" },
         { word: "Lead (II) carbonate", match: "<p>PbCO<sub>3</sub></p>" },
         { word: "Tin (IV) nitride", match: "<p>Sn<sub>3</sub>N<sub>4</sub></p>" },
-        { word: "Sodium bicarbonate", match: "NaHCO<sub>3</sub>" },
-        { word: "Carbon dioxide", match: "CO<sub>2</sub>" },
-        { word: "Carbon tetrachloride", match: "CCl<sub>4</sub>" },
-        { word: "Phosphorus pentafluoride", match: "PF<sub>5</sub>" },
-        { word: "Dinitrogen tetroxide", match: "N<sub>2</sub>O<sub>4</sub>" },
-        { word: "Dichlorine heptoxide", match: "Cl<sub>2</sub>O<sub>7</sub>" },
-        { word: "Diphosphorus monoxide", match: "P<sub>2</sub>O" },
-        { word: "Disulfur dichloride", match: "S<sub>2</sub>Cl<sub>2</sub>" },
-        { word: "Sodium oxide", match: "Na<sub>2</sub>O" },
-        { word: "Silicon tetrafluoride", match: "SiF<sub>4</sub>" },
-        { word: "Boron trichloride", match: "BCl<sub>3</sub>" },
-        { word: "Phosphorus tribromide", match: "PBr<sub>3</sub>" },
-        { word: "Pentacarbon decahydride", match: "C<sub>5</sub>H<sub>10</sub>" },
+        { word: "Sodium bicarbonate", match: "<p>NaHCO<sub>3</sub></p>" },
+        { word: "Carbon dioxide", match: "<p>CO<sub>2</sub></p>" },
+        { word: "Carbon tetrachloride", match: "<p>CCl<sub>4</sub></p>" },
+        { word: "Phosphorus pentafluoride", match: "<p>PF<sub>5</sub></p>" },
+        { word: "Dinitrogen tetroxide", match: "<p>N<sub>2</sub>O<sub>4</sub></p>" },
+        { word: "Dichlorine heptoxide", match: "<p>Cl<sub>2</sub>O<sub>7</sub></p>" },
+        { word: "Diphosphorus monoxide", match: "<p>P<sub>2</sub>O</p>" },
+        { word: "Disulfur dichloride", match: "<p>S<sub>2</sub>Cl<sub>2</sub></p>" },
+        { word: "Sodium oxide", match: "<p>Na<sub>2</sub>O</p>" },
+        { word: "Silicon tetrafluoride", match: "<p>SiF<sub>4</sub></p>" },
+        { word: "Boron trichloride", match: "<p>BCl<sub>3</sub></p>" },
+        { word: "Phosphorus tribromide", match: "<p>PBr<sub>3</sub></p>" },
+        { word: "Pentacarbon decahydride", match: "<p>C<sub>5</sub>H<sub>10</sub></p>" },
         { word: "Sulfur hexafluoride", match: "<p>SF<sub>6</sub></p>" },
-        { word: "Xenon octachloride", match: "XeCl<sub>8</sub>" },
-        { word: "Octacarbon hexahydride", match: "C<sub>8</sub>H<sub>6</sub>" },
+        { word: "Xenon octachloride", match: "<p>XeCl<sub>8</sub></p>" },
+        { word: "Octacarbon hexahydride", match: "<p>C<sub>8</sub>H<sub>6</sub></p>" },
         { word: "Carbon monoxide", match: "CO" }
     ];
     let cards = document.getElementsByClassName("blink");
@@ -138,7 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
             cardPairs.push(shuffledPairs[i].word);
             cardPairs.push(shuffledPairs[i].match);
         }
-        console.log(cardPairs);
+        //shuffledPairs = shuffledPairs.splice(0, cards.length / 2);
+        //console.log(cardPairs);
 
         // shuffle that array
         // iterate over that array to assign card
@@ -151,22 +152,52 @@ document.addEventListener("DOMContentLoaded", () => {
         function isClicked(e) {
             let cardClicked = e.srcElement;
             cardClicked.classList.add("clicked");
-            let numClicked = document.getElementsByClassName("clicked").length;
-            if (numClicked == 2) {
+            let clicked = document.getElementsByClassName("clicked");
+            if (clicked.length == 2) {
+                console.log("here!!!!");
                 //look for match
+                //console.log(clicked[0].innerHTML);
+                //console.log(clicked[1].innerHTML);
+                if (isMatch(clicked[0].innerHTML, clicked[1].innerHTML)) {
+                    console.log("here2!!!!");
+                    //console.log("I'm here");
+                    clicked[0].classList.add("correct");
+                    clicked[1].classList.add("correct");
+                    clicked[0].disabled = "true";
+                    clicked[1].disabled = "true";
+
+                    clicked[0].classList.remove("clicked");
+                    clicked[0].classList.remove("clicked");
+
+                    let selected = document.getElementsByClassName("correct");
+                    if (selected.length == 32) {
+                        alert("You've completed round 1");
+                    }
+                } else {
+                    clicked[0].classList.remove("clicked");
+                    clicked[0].classList.remove("clicked");
+                }
             }
         }
         function isMatch(item1, item2) {
-            for (let i = 0; i < object.keys(pairs).length; i++) {
+            for (let i = 0; i < Object.keys(pairs).length; i++) {
+                console.log(pairs[i]);
                 if (item1 == pairs[i].word && item2 == pairs[i].match) {
+                    //console.log("here1");
                     return true;
                 }
                 if (item2 == pairs[i].word && item1 == pairs[i].match) {
+                    //console.log("here2");
                     return true;
                 }
-                return false;
             }
+            return false;
         }
     }
     shuffleAssign();
+    
+    let mySound = new Audio('');
+mySound.play();
 });
+
+

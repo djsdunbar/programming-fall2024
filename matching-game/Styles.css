@@ -1,13 +1,17 @@
 .header {
   text-align: center;
-  color: #005470;
-  background-color: #e3cfff;
+  color: #ffffd2;
+  background-color: #afe6ff;
   padding: 10px;
   border-radius: 30px;
 }
-
+#mainpage{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 #start {
-  background-color: rgb(255, 200, 226);
+  background-color: #afe6ff;
   color: #000000;
   display: block;
   margin: auto;
@@ -32,7 +36,7 @@
 }
 
 .box {
-  background-color: #9b9deb;
+  background-color: #afe6ff;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -42,7 +46,7 @@
 }
 
 .formula {
-  background-color: #ddccff;
+  background-color: #ffffd2;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -72,4 +76,11 @@ body {
 
 .clicked {
   background-color: cadetblue;
+}
+
+.correct{
+  background-color: green;
+}
+#link{
+  background-color: aqua
 }
