@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { word: "Carbon monoxide", match: "CO" }
     ];
     let cards = document.getElementsByClassName("blink");
+    let round = 0;
     console.log(cards);
     // Fisher-Yates (or Knuth) Shuffle algorithm
     function shuffleArray(array) {
@@ -159,12 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
             cardClicked.classList.add("clicked");
             let clicked = document.getElementsByClassName("clicked");
             if (clicked.length == 2) {
-                console.log("here!!!!");
+             
                 //look for match
                 //console.log(clicked[0].innerHTML);
                 //console.log(clicked[1].innerHTML);
                 if (isMatch(clicked[0].innerHTML, clicked[1].innerHTML)) {
-                    console.log("here2!!!!");
+                  
                     //console.log("I'm here");
                     clicked[0].classList.add("correct");
                     clicked[1].classList.add("correct");
@@ -175,8 +176,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     clicked[0].classList.remove("clicked");
 
                     let selected = document.getElementsByClassName("correct");
-                    if (selected.length == 32) {
+                    if (selected.length == 32 && round == 0) {
+                        round = 1;
                         alert("You've completed round 1");
+                        for (let i = 0; i < cardPairs.length; i++) {
+                            for (let j = 0; j < pairs.length; j++) {
+                                if (cardPairs[i] == pairs[j].word) {
+                                    console.log(cardPairs[i]);
+                                    console.log(pairs[j].word);
+                                    pairs.splice(j, 1);
+                                }
+                            }
+                        }
+                        for (let i = 0; i < cards.length; i++) {
+                            cards[i].classList.remove("correct");
+                            cards[i].disabled = false;
+                            alert("You've completed round 2! You win!");
+                        }
+                        shuffleAssign();
+                    }
+
+                    if (selected.length == 32 && round == 1) {
+                        // whatever you want to do when they win the whole game
                     }
                 } else {
                     clicked[0].classList.remove("clicked");
@@ -202,7 +223,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     shuffleAssign();
-
-    let mySound = new Audio("");
-    mySound.play();
 });
