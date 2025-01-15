@@ -160,13 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cardClicked.classList.add("clicked");
             let clicked = document.getElementsByClassName("clicked");
             if (clicked.length == 2) {
-             
-                //look for match
-                //console.log(clicked[0].innerHTML);
-                //console.log(clicked[1].innerHTML);
                 if (isMatch(clicked[0].innerHTML, clicked[1].innerHTML)) {
-                  
-                    //console.log("I'm here");
                     clicked[0].classList.add("correct");
                     clicked[1].classList.add("correct");
                     clicked[0].disabled = "true";
@@ -189,15 +183,15 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                         }
                         for (let i = 0; i < cards.length; i++) {
-                            cards[i].classList.remove("correct");
                             cards[i].disabled = false;
-                            alert("You've completed round 2! You win!");
+                            cards[i].classList.remove("correct");
                         }
                         shuffleAssign();
                     }
 
                     if (selected.length == 32 && round == 1) {
                         // whatever you want to do when they win the whole game
+                        window.location.href="./Restart.html";
                     }
                 } else {
                     clicked[0].classList.remove("clicked");
