@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (selected.length == 32 && round == 1) {
                         // whatever you want to do when they win the whole game
-                        window.location.href = "./Restart.html";
+                        window.location.href = "./Restart";
                         // links to other page after completed the matching game to a restart page if the user wants to play again.
                     }
                 } else {
