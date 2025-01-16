@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cardClicked.tagName == "P") {
                 alert("Please don't click the text");
                 return;
+                // clicking the text makes the cards not match, because the code is set up where if the user selects the box it will work.
             }
             cardClicked.classList.add("clicked");
             let clicked = document.getElementsByClassName("clicked");
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clicked[1].classList.add("correct");
                     clicked[0].disabled = "true";
                     clicked[1].disabled = "true";
-
+                    // if the card you choose is correct then it will green, but then the user is not allowed to selecetd those cards again.
                     clicked[0].classList.remove("clicked");
                     clicked[0].classList.remove("clicked");
 
@@ -179,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     console.log(cardPairs[i]);
                                     console.log(pairs[j].word);
                                     pairs.splice(j, 1);
+                                    // will reset to tyhe rest of the cards that you havent matched yet and removed all the cards that were just matched.
                                 }
                             }
                         }
@@ -191,7 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (selected.length == 32 && round == 1) {
                         // whatever you want to do when they win the whole game
-                        window.location.href="./Restart.html";
+                        window.location.href = "./Restart.html";
+                        // links to other page after completed the matching game to a restart page if the user wants to play again.
                     }
                 } else {
                     clicked[0].classList.remove("clicked");
@@ -200,8 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         function isMatch(item1, item2) {
-            console.log(item1);
-            console.log(item2);
             for (let i = 0; i < Object.keys(pairs).length; i++) {
                 console.log(pairs[i]);
                 if (item1 == pairs[i].word && item2 == pairs[i].match) {
